@@ -254,7 +254,7 @@ padding: 0.4rem;
 }
 .hotel-cards .card{
     width: 80%;
-    background-color:rgb(196, 222, 233);
+    /* background-color:rgb(196, 222, 233); */
     border: 2px solid var(--color-primary);
     border-radius: 2rem;
     margin-top:2rem;
@@ -444,7 +444,7 @@ body {
 
 /* section 1 styling */
 .container {
-    height: 50vh;
+    height: 40vh;
 }
 .container .slider-frames .slide img{
     max-height: 50vh;

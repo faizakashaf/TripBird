@@ -5,10 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css files/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="./assets/fav icon.jpeg" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <h1>Hello</h1>
-    </div>
+    <section>
+        <nav class="active" id="navbar">
+            <div class="logo">
+                <h1>Trip<span>Bird</span></h1>
+            </div>
+            <div class="navitems active">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#" >Attractions</a></li>
+                    <li><a href="#">Flight Booking</a></li>
+                    <li><a href="./index.html">Hotel Reservation</a></li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <button class="signupbtn">Sign Up</button>
+                <button class="loginbtn">Login</button>
+            </div>
+            <div id="menu-icon"><i class="fa-solid fa-bars hamburger"></i></div>
+        </nav>
+    </section>
+       <section class="section2">
+        <div class="container">
+            <div class="contactinfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li class="location">
+                           <span><i class="fa-solid fa-location-dot location"></i></span> 
+                           <span>Shahr-e-Faisal Road Karachi, Pakistan
+                        </span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-envelope email"></i></span>
+                            <span>tripbird@hotmail.com</span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-phone phone"></i></span>
+                            <span> 310-992-8856</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+             <div class="contactform">
+                <h2>Send a Message</h2>
+
+             </div>
+        </div>
+       </section>
+
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+    
+        menuIcon.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

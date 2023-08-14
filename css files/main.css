@@ -1,42 +1,49 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html{
-   font-size: 62.5%;    /*  1rem = 10px */
+
+html {
+    font-size: 62.5%;
+    /*  1rem = 10px */
     overflow-x: hidden;
 }
-body{
-     width:100%;
-     height: auto;
+
+body {
+    width: 100%;
+    height: auto;
     font-family: 'Poppins', sans-serif;
 }
+
 :root {
-    --color-black: rgb(4, 4, 4);
-    --color-light-black:rgb(13, 13, 13);
-    --color-white :white;
+    --color-primary-light: rgb(240, 248,255);
+    --color-black: rgba(43, 43, 43, 0.794);
+    --color-light-black: rgb(13, 13, 13);
+    --color-white: white;
     --color-primary: rgb(0, 140, 255);
     --color-primary-dark: rgb(3, 115, 207);
     --color-red: rgb(255, 0, 0);
     --color-light-primary: rgb(163, 205, 236);
-    
+
 }
 
 /* navbar styling */
-#navbar{
-  
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height:7rem;
-    /* position: fixed; */
+#navbar {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 7rem;
+
 }
- #navbar .logo h1 {
+
+#navbar .logo h1 {
     font-size: 2.5rem;
     color: var(--color-black);
     font-weight: 700;
 }
+
 #navbar .logo h1 span {
     font-size: 2.5rem;
     color: var(--color-primary);
@@ -100,22 +107,24 @@ body{
     margin: 0 0.8rem;
     font-family: inherit;
 }
-#menu-icon{
+
+#menu-icon {
     font-size: 3rem;
-    color:var(--color-black);
+    color: var(--color-black);
     cursor: pointer;
-    z-index:1001 ; 
+    z-index: 1001;
     display: none;
 }
-.section2{
+ /* Form Section Styling */
+.section2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 7rem); 
-    /* border: 1px solid red; */
+    height: calc(100vh - 7rem);
     background-color: var(--color-light-black);
 }
-.section2::before{
+
+.section2::before {
     content: "";
     position: absolute;
     top: 7rem;
@@ -124,83 +133,207 @@ body{
     height: 88%;
     background-color: var(--color-light-primary);
 }
- .container{
+
+.container {
     position: relative;
-     min-width: 1000px;  /*vid ma width 1100px ha */
-      min-height: 40rem;
-     display: flex;
-     z-index:1000;
-} 
-.container .contactinfo{
-position: absolute;
-top: 13%;
-width: 22rem;
-height:75%;
-background-color:var(--color-black);
-z-index: 1;
-padding:0.5rem 0.5rem;
-display: flex;
-justify-content: center;
-flex-direction: column;
-box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.25);
-} 
-.container .contactinfo h2{
-color: var(--color-white);
-font-size: 2.5rem;
-font-weight: 600;
-padding: 0.5rem;
-text-decoration: underline;
+    min-width: 1000px;
+    min-height: 40rem;
+    display: flex;
+    z-index: 1000;
+
+
 }
-.container .contactinfo .info{
+
+.container .contactinfo {
+    position: absolute;
+    top: 13%;
+    left: 0;
+    width: 22rem;
+    height: 75%;
+    background-color: var(--color-black);
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container .contactinfo:hover {
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.container .contactinfo h2 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    text-align: center;
+
+}
+
+.container .contactinfo .info {
     position: relative;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
-.container .contactinfo .info li{
+
+.container .contactinfo .info li {
     position: relative;
     list-style: none;
-    margin: 3rem 0;
-    /* display: flex;
-    justify-content: flex-start;
-    align-items: center;  */
+    margin: 2rem 0;
     cursor: pointer;
 }
 
-.container .contactinfo .info li span{
+.container .contactinfo .info li span {
     font-size: 1.5rem;
     color: var(--color-white);
     padding-left: 0.5rem;
 }
 
-.container .contactform{
+.container .contactinfo .info li span:nth-child(2) {
+    margin-left: 0.5rem;
+}
 
-    position: absolute;
-     padding: 7rem 5rem; 
-    margin-left: 11rem;
-    width: 89%;
-    background-color:var(--color-white);
-    height: 100%;
-box-shadow: 0 0 4px 4px rgba(0, 0, 0,0.25);
+.container .contactinfo .follow-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 12%;
+    padding-bottom: 1.5rem;
 }
 
 
+.container .contactinfo .follow-us li {
+    list-style: none;
+    font-size: 2rem;
+
+}
+
+.container .contactinfo .follow-us li a {
+    text-decoration: none;
+    color: var(--color-white);
+
+}
+
+.container .contactform {
+    position: absolute;
+    padding: 3rem 15rem;
+    margin-left: 11rem;
+    width: 89%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    height: 100%;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.container .contactform h2 {
+
+    color: var(--color-black);
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: inherit;
+    text-align: center;
+}
+
+.container .contactform .formbox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 2rem 0.5rem;
+}
+
+.container .contactform .formbox .inputbox {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 40%;
+}
+.container .contactform .formbox .inputbox input {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid var(--color-black);
+}
+
+.container .contactform .formbox .inputbox span {
+    position: absolute;
+    left: 0;
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+    pointer-events: none;
+    transition: 0.3s;
+    color: var(--color-primary-dark);
+
+}
+.container .contactform .formbox .inputbox input:focus~span,
+.container .contactform .formbox .inputbox input:valid~span,
+.container .contactform .formbox .inputbox textarea:focus~span,
+.container .contactform .formbox .inputbox textarea:valid~span
+{
+    transform: translateY(-2rem);
+    color: var(--color-primary-dark);
+}
+.container .contactform .formbox .w100 {
+    width: 100%;
+    resize: none;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+ 
+}
+
+.container .contactform .formbox .inputbox textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    border-bottom: 1.5px solid var(--color-black);
+    font-size: 1.5rem;
+    font: 400;
+    padding: 1rem 1.5rem 0 1rem;
+    
+}
+.container .contactform .formbox  .w100 span{
+    font-weight: 400;
+}
+.container .contactform .formbox .inputbox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background-color:var(--color-primary) ;
+    color: var(--color-white);
+    max-width: 15rem;
+    border: none;
+    border-radius:1rem;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    margin: 2rem 0;
+}
+.container .contactform .formbox .inputbox input[type="submit"]:hover{
+    background-color: rgb(25, 144, 241);
+    
+}
 
 @media (max-width: 768px) {
-    
+
     #menu-icon {
-        display: block; 
+        display: block;
     }
-    
+
     #navbar {
-        flex-direction: column; 
-        height: auto; 
+        flex-direction: column;
+        height: auto;
         position: relative;
     }
-    
+
     #navbar .logo {
-        text-align: center; 
+        text-align: center;
         margin: 1rem 0;
     }
-    
+
     #navbar .navitems {
         display: none;
         width: 100%;
@@ -210,30 +343,30 @@ box-shadow: 0 0 4px 4px rgba(0, 0, 0,0.25);
         background-color: var(--color-white);
         z-index: 1000;
     }
-    
+
     #navbar.active .navitems {
-        display: block; 
+        display: block;
     }
-    
+
     #navbar .navitems ul {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         padding: 2rem 0;
-        margin-top: 2.5rem; 
+        margin-top: 2.5rem;
     }
-    
+
     #navbar .navitems ul li {
         margin: 0.5rem 0;
     }
-    
+
     #navbar .buttons {
         margin: 1rem 0;
         text-align: center;
         z-index: 1002;
         position: relative;
     }
-    
+
     #menu-icon {
         display: block;
         position: absolute;
@@ -242,6 +375,3 @@ box-shadow: 0 0 4px 4px rgba(0, 0, 0,0.25);
         z-index: 1003;
     }
 }
-
-
-

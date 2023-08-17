@@ -17,9 +17,9 @@ body {
 }
 
 :root {
-    --color-primary-light: rgb(240, 248,255);
-    --color-black: rgba(43, 43, 43, 0.794);
-    --color-light-black: rgb(13, 13, 13);
+    --color-primary-light: rgb(240, 248, 255);
+    --color-black: rgba(43, 43, 43, 0.74);
+    --color-light-black: rgba(43, 43, 43, 0.794);
     --color-white: white;
     --color-primary: rgb(0, 140, 255);
     --color-primary-dark: rgb(3, 115, 207);
@@ -27,7 +27,6 @@ body {
     --color-light-primary: rgb(163, 205, 236);
 
 }
-
 /* navbar styling */
 #navbar {
 
@@ -50,10 +49,15 @@ body {
     font-weight: 700;
 }
 
+#navbar .navitems {
+    display: flex;
+    align-items: center;
+}
+
 #navbar .navitems ul {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     margin: 1rem 0;
 
 }
@@ -83,6 +87,11 @@ body {
     border-bottom: 0.2rem solid var(--color-primary);
 }
 
+#navbar .buttons {
+    display: flex;
+    align-items: center;
+}
+
 #navbar .buttons button {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -96,16 +105,15 @@ body {
     outline: none;
 }
 
+#navbar .buttons .signupbtn,
+#navbar .buttons .loginbtn {
+    width: 10rem;
+    height: 4rem;
+}
+
 #navbar .buttons button:hover {
     background-color: var(--color-primary-dark);
     color: var(--color-white);
-    border: none;
-    font-size: 1.2rem;
-    border-radius: 1rem;
-    padding: 1rem 2rem;
-    font-weight: 700;
-    margin: 0 0.8rem;
-    font-family: inherit;
 }
 
 #menu-icon {
@@ -115,7 +123,8 @@ body {
     z-index: 1001;
     display: none;
 }
- /* Form Section Styling */
+
+/* Form Section Styling */
 .section2 {
     display: flex;
     justify-content: center;
@@ -251,6 +260,7 @@ body {
     align-content: center;
     width: 40%;
 }
+
 .container .contactform .formbox .inputbox input {
     width: 100%;
     padding: 0.6rem 1rem;
@@ -269,14 +279,15 @@ body {
     color: var(--color-primary-dark);
 
 }
+
 .container .contactform .formbox .inputbox input:focus~span,
 .container .contactform .formbox .inputbox input:valid~span,
 .container .contactform .formbox .inputbox textarea:focus~span,
-.container .contactform .formbox .inputbox textarea:valid~span
-{
+.container .contactform .formbox .inputbox textarea:valid~span {
     transform: translateY(-2rem);
     color: var(--color-primary-dark);
 }
+
 .container .contactform .formbox .w100 {
     width: 100%;
     resize: none;
@@ -284,7 +295,7 @@ body {
     font-weight: 300;
     color: var(--color-black);
     margin-bottom: 1rem;
- 
+
 }
 
 .container .contactform .formbox .inputbox textarea {
@@ -295,83 +306,28 @@ body {
     font-size: 1.5rem;
     font: 400;
     padding: 1rem 1.5rem 0 1rem;
-    
+
 }
-.container .contactform .formbox  .w100 span{
+
+.container .contactform .formbox .w100 span {
     font-weight: 400;
 }
-.container .contactform .formbox .inputbox input[type="submit"]{
+
+.container .contactform .formbox .inputbox input[type="submit"] {
     position: relative;
     cursor: pointer;
-    background-color:var(--color-primary) ;
+    background-color: var(--color-primary);
     color: var(--color-white);
     max-width: 15rem;
     border: none;
-    border-radius:1rem;
+    border-radius: 1rem;
     font-size: 1.6rem;
     padding: 1.2rem;
     margin: 2rem 0;
 }
-.container .contactform .formbox .inputbox input[type="submit"]:hover{
+
+.container .contactform .formbox .inputbox input[type="submit"]:hover {
     background-color: rgb(25, 144, 241);
-    
+
 }
 
-@media (max-width: 768px) {
-
-    #menu-icon {
-        display: block;
-    }
-
-    #navbar {
-        flex-direction: column;
-        height: auto;
-        position: relative;
-    }
-
-    #navbar .logo {
-        text-align: center;
-        margin: 1rem 0;
-    }
-
-    #navbar .navitems {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 7rem;
-        left: 0;
-        background-color: var(--color-white);
-        z-index: 1000;
-    }
-
-    #navbar.active .navitems {
-        display: block;
-    }
-
-    #navbar .navitems ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 2rem 0;
-        margin-top: 2.5rem;
-    }
-
-    #navbar .navitems ul li {
-        margin: 0.5rem 0;
-    }
-
-    #navbar .buttons {
-        margin: 1rem 0;
-        text-align: center;
-        z-index: 1002;
-        position: relative;
-    }
-
-    #menu-icon {
-        display: block;
-        position: absolute;
-        top: 1rem;
-        right: 2rem;
-        z-index: 1003;
-    }
-}
